@@ -24,7 +24,7 @@ Pod::Spec.new do |spec|
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  spec.description  = "sample extension for project"
+  spec.description  = "sample extension for project adding cocoapods"
 
   spec.homepage     = "https://github.com/naveen-krv/my-extensions"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -51,7 +51,7 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "naveen-krv" => "80533551+naveen-krv@users.noreply.github.com" }
+  spec.author             = { "naveen-krv" => "naveenkumar.veerasekaran@photon.in" }
   # Or just: spec.author    = "naveen-krv"
   # spec.authors            = { "naveen-krv" => "80533551+naveen-krv@users.noreply.github.com" }
   # spec.social_media_url   = "https://twitter.com/naveen-krv"
@@ -63,7 +63,8 @@ Pod::Spec.new do |spec|
   #
 
   # spec.platform     = :ios
-  # spec.platform     = :ios, "5.0"
+  spec.swift_versions = "5.0"
+  spec.platform     = :ios, "14.0"
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"

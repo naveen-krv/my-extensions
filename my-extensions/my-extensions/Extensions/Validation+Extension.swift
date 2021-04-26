@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+public extension String {
+    
+    func isEmpty() -> Bool {
+        return self == ""
+    }
+}

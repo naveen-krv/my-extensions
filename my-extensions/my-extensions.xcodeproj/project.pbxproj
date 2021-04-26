@@ -10,6 +10,7 @@
 		BDE044162636FE3900EC6326 /* my_extensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDE0440C2636FE3900EC6326 /* my_extensions.framework */; };
 		BDE0441B2636FE3900EC6326 /* my_extensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE0441A2636FE3900EC6326 /* my_extensionsTests.swift */; };
 		BDE0441D2636FE3900EC6326 /* my_extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = BDE0440F2636FE3900EC6326 /* my_extensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDE0442A2636FEA600EC6326 /* Validation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE044292636FEA600EC6326 /* Validation+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		BDE044152636FE3900EC6326 /* my-extensionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "my-extensionsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDE0441A2636FE3900EC6326 /* my_extensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = my_extensionsTests.swift; sourceTree = "<group>"; };
 		BDE0441C2636FE3900EC6326 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDE044292636FEA600EC6326 /* Validation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Validation+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		BDE0440E2636FE3900EC6326 /* my-extensions */ = {
 			isa = PBXGroup;
 			children = (
+				BDE044282636FE5400EC6326 /* Extensions */,
 				BDE0440F2636FE3900EC6326 /* my_extensions.h */,
 				BDE044102636FE3900EC6326 /* Info.plist */,
 			);
@@ -84,6 +87,14 @@
 				BDE0441C2636FE3900EC6326 /* Info.plist */,
 			);
 			path = "my-extensionsTests";
+			sourceTree = "<group>";
+		};
+		BDE044282636FE5400EC6326 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BDE044292636FEA600EC6326 /* Validation+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +158,7 @@
 				TargetAttributes = {
 					BDE0440B2636FE3900EC6326 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					BDE044142636FE3900EC6326 = {
 						CreatedOnToolsVersion = 12.4;
@@ -194,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDE0442A2636FEA600EC6326 /* Validation+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +354,7 @@
 		BDE044212636FE3900EC6326 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -356,6 +370,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sample.my-extensions";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +379,7 @@
 		BDE044222636FE3900EC6326 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -387,6 +403,7 @@
 		BDE044242636FE3900EC6326 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "my-extensionsTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -404,6 +421,7 @@
 		BDE044252636FE3900EC6326 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "my-extensionsTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
